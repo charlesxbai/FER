@@ -22,25 +22,25 @@ if not os.path.exists(os.path.dirname(datapath)):
 with open(file,'r') as csvin:
     data=csv.reader(csvin)
     for row in data:
-        if row[-1] == 'Training':
+        if row[1] == 'Training':
             temp_list = []
-            for pixel in row[1].split( ):
+            for pixel in row[2].split( ):
                 temp_list.append(int(pixel))
             I = np.asarray(temp_list)
             Training_y.append(int(row[0]))
             Training_x.append(I.tolist())
 
-        if row[-1] == "PublicTest" :
+        if row[1] == "PublicTest" :
             temp_list = []
-            for pixel in row[1].split( ):
+            for pixel in row[2].split( ):
                 temp_list.append(int(pixel))
             I = np.asarray(temp_list)
             PublicTest_y.append(int(row[0]))
             PublicTest_x.append(I.tolist())
 
-        if row[-1] == 'PrivateTest':
+        if row[1] == 'PrivateTest':
             temp_list = []
-            for pixel in row[1].split( ):
+            for pixel in row[2].split( ):
                 temp_list.append(int(pixel))
             I = np.asarray(temp_list)
 

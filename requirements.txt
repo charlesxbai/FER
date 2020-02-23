@@ -1,0 +1,7 @@
+torch
+h5py
+sklearn
+matplotlib
+pillow
+scikit-image
+torchvision
