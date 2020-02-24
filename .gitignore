@@ -1,0 +1,7 @@
+FER2013_VGG19/
+__pycache__/
+data/data.h5
+data/fer2013.csv
+models/__pycache__/
+transforms/__pycache__/
+venv/
